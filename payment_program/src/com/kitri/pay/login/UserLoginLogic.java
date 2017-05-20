@@ -14,7 +14,13 @@ public class UserLoginLogic {
 	String id = login.loginIdTf.getText().trim();
 	String pw = login.loginPwTf.getText().trim();
 
-	// 유효성 검사
+	if (id.isEmpty() || pw.isEmpty()) {
+	    login.fieldEmpty();
+	} else {
+	    Main.network.sendPacket(PacketInformation.Operation.LOGIN, PacketInformation.PacketType.ID_PW,
+		    id + "," + pw);
+
+	}
 
 	Main.network.sendPacket(PacketInformation.Operation.LOGIN, PacketInformation.PacketType.ID_PW, id + "," + pw);
 

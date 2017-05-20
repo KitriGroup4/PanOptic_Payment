@@ -16,16 +16,16 @@ public class UserInfoDto {
     
     public UserInfoDto() {
 	userNum = -1;
-	userId = "-1";
-	userName = "-1";
-	userPw = "-1";
-	userHp = "-1";
-	userEmail = "-1";
-	userAccuTime = "-1";
-	userLeftTime = "-1";
-	userJoinDate = "-1";
-	userBirth = "-1";
-	isMale = "-1";	
+	userId = null;
+	userName = null;
+	userPw = null;
+	userHp = null;
+	userEmail = null;
+	userAccuTime = null;
+	userLeftTime = null;
+	userJoinDate = null;
+	userBirth = null;
+	isMale = null;	
     }
 
     public int getUserNum() {

@@ -20,6 +20,8 @@ public class PaymentViewLogic {
 			PacketInformation.PacketType.CARD + "," + view.index + "," + view.userNum);
 	    }
 	}
+	
+	
     }
 
 }

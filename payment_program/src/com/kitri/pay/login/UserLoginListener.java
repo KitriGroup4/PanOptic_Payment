@@ -19,7 +19,7 @@ public class UserLoginListener implements ActionListener {
 
 	if (o == login.closeButton) {
 	    login.setVisible(false);
-	} else if (o == login.loginBtn) {
+	} else if (o == login.loginBtn || o == login.loginPwTf) {
 	    logic.login();
 	}
     }

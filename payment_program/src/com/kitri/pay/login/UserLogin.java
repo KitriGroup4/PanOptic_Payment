@@ -116,6 +116,17 @@ public class UserLogin extends JInternalFrame {
 
 	closeButton.addActionListener(listener);
 	loginBtn.addActionListener(listener);
+	loginPwTf.addActionListener(listener);
+
+    }
+
+    public void loginFail() {
+	JOptionPane.showMessageDialog(this, "아이디 혹은 비밀번호를 확인해주세요.", "로그인 실패", JOptionPane.WARNING_MESSAGE);
+
+    }
+
+    public void fieldEmpty() {
+	JOptionPane.showMessageDialog(this, "아이디 비밀번호를 입력해주세요.", "공백", JOptionPane.WARNING_MESSAGE);
 
     }
 
