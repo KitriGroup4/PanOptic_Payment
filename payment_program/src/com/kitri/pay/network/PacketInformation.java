@@ -30,6 +30,7 @@ public class PacketInformation {
 	public static final byte BUY = 5;
 	public static final byte START = 6;
 	public static final byte END = 7;
+	public static final byte LOGOUT = 8;
     }
 
     public static class PacketType {
