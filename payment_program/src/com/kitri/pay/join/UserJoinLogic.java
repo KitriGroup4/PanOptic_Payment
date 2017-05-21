@@ -31,7 +31,7 @@ public class UserJoinLogic {
 		    + join.dd.getSelectedItem();
 	    String isMale = join.isMale ? "1" : "0";
 	    Main.log(birth);
-
+	    
 	    // 유효성검사를 성공하면
 
 	    if (checkField(pw, pwCheck, email, hp)) {
