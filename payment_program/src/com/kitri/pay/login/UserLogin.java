@@ -17,7 +17,6 @@ public class UserLogin extends JInternalFrame {
     private JLabel loginPwLabel;
     private JPanel LoginInputPane;
     public JTextField loginIdTf;
-    public JTextField loginPwTf;
     public JButton closeButton;
     public JButton loginBtn;
     private JPanel LoginButnPane;
@@ -25,6 +24,7 @@ public class UserLogin extends JInternalFrame {
     private JLabel comimg;
 
     private UserLoginListener listener;
+    public JPasswordField loginPwTf;
 
     /**
      * Launch the application.
@@ -114,13 +114,11 @@ public class UserLogin extends JInternalFrame {
 	loginIdTf.setBackground(SystemColor.controlHighlight);
 	LoginInputPane.add(loginIdTf);
 	loginIdTf.setColumns(10);
-
-	loginPwTf = new JTextField();
-	loginPwTf.setBorder(new LineBorder(Color.WHITE));
-	loginPwTf.setDisabledTextColor(Color.WHITE);
-	loginPwTf.setBackground(SystemColor.controlHighlight);
+	
+	loginPwTf = new JPasswordField();
+	loginPwTf.setBorder(new LineBorder(SystemColor.window));
+	loginPwTf.setBackground(new Color(227, 227, 227));
 	LoginInputPane.add(loginPwTf);
-	loginPwTf.setColumns(10);
 
 	comImgPanel = new JPanel();
 	comImgPanel.setBackground(Color.WHITE);
@@ -135,7 +133,6 @@ public class UserLogin extends JInternalFrame {
 
 	closeButton.addActionListener(listener);
 	loginBtn.addActionListener(listener);
-	loginPwTf.addActionListener(listener);
 
     }
 
