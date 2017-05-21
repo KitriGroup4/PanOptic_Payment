@@ -55,15 +55,17 @@ public class PaymentView extends JInternalFrame {
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setBounds(100, 100, 450, 300);
 	contentPane = new JPanel();
+	contentPane.setBackground(Color.WHITE);
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
 	contentPane.setLayout(new BorderLayout(0, 0));
 
 	upPanel = new JPanel();
+	upPanel.setOpaque(false);
 	contentPane.add(upPanel, BorderLayout.NORTH);
 
 	upLabel = new JLabel("\uC11C\uBA85");
-	upLabel.setFont(new Font("±¼¸²", Font.BOLD, 38));
+	upLabel.setFont(new Font("¹è´ÞÀÇ¹ÎÁ· µµÇö", Font.PLAIN, 30));
 	upPanel.add(upLabel);
 
 	draw = new DrawPanel();
@@ -71,14 +73,20 @@ public class PaymentView extends JInternalFrame {
 	contentPane.add(draw, BorderLayout.CENTER);
 
 	bottomPanel = new JPanel();
+	bottomPanel.setFont(new Font("±¼¸²", Font.PLAIN, 35));
+	bottomPanel.setOpaque(false);
 	contentPane.add(bottomPanel, BorderLayout.SOUTH);
 
 	payButton = new JButton("\uACB0\uC81C");
-	payButton.setFont(new Font("±¼¸²", Font.BOLD, 26));
+	payButton.setForeground(Color.WHITE);
+	payButton.setBackground(new Color(200, 162, 255));
+	payButton.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 	bottomPanel.add(payButton);
 	
 	closeButton = new JButton("\uB2EB\uAE30");
-	closeButton.setFont(new Font("±¼¸²", Font.BOLD, 26));
+	closeButton.setBackground(new Color(200, 162, 255));
+	closeButton.setForeground(Color.WHITE);
+	closeButton.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 20));
 	bottomPanel.add(closeButton);
 	
 	payButton.addActionListener(listener);
