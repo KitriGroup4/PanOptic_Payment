@@ -51,6 +51,10 @@ public class Network implements Runnable {
 		// len = reader.read(byteBuffer);
 
 		packets = buffReader.readLine();
+		if(packets == null){
+		    Main.log("recv : null !!!!!!!");
+		    continue;
+		}
 		Main.log("rcv : " + packets);
 		divisionPacket(packets);
 
