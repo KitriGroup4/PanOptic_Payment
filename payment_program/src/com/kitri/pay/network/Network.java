@@ -86,7 +86,6 @@ public class Network implements Runnable {
 
     private void divisionPacket(String packets) {
 	String PATTERN = "!";
-	String UNIT = "/";
 
 	StringTokenizer patternToken = new StringTokenizer(packets.trim(), PATTERN);
 	StringTokenizer unitToken;
@@ -94,7 +93,7 @@ public class Network implements Runnable {
 	int i = 0;
 
 	while (patternToken.hasMoreTokens()) {
-	    unitToken = new StringTokenizer(patternToken.nextToken(), UNIT);
+	    unitToken = new StringTokenizer(patternToken.nextToken(), PacketInformation.PACKET_PARTITION);
 	    dataPacket = new String[PacketInformation.PACKET_SIZE];
 	    i = 0;
 	    while (unitToken.hasMoreTokens()) {
@@ -212,11 +211,11 @@ public class Network implements Runnable {
 	StringBuilder buff = new StringBuilder("");
 
 	buff.append(programValue);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(operator);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(packetType);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(data);
 	buff.append("!");
 	Main.log(buff.toString());
@@ -227,11 +226,11 @@ public class Network implements Runnable {
 	StringBuilder buff = new StringBuilder("");
 
 	buff.append(programValue);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(operator);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(packetType);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(data);
 	buff.append("!");
 	Main.log(buff.toString());
@@ -243,11 +242,11 @@ public class Network implements Runnable {
 	StringBuilder buff = new StringBuilder("");
 
 	buff.append(PacketInformation.ProgramValue.PAYMENT);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(operator);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(packetType);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(data);
 	buff.append("!");
 
@@ -259,11 +258,11 @@ public class Network implements Runnable {
 	StringBuilder buff = new StringBuilder("");
 
 	buff.append(PacketInformation.ProgramValue.PAYMENT);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(operator);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(packetType);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(data);
 	buff.append("!");
 
@@ -275,11 +274,11 @@ public class Network implements Runnable {
 	StringBuilder buff = new StringBuilder("");
 
 	buff.append(PacketInformation.ProgramValue.PAYMENT);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(operator);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(packetType);
-	buff.append("/");
+	buff.append(PacketInformation.PACKET_PARTITION);
 	buff.append(data);
 	buff.append("!");
 	Main.log(buff.toString());

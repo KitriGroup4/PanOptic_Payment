@@ -2,6 +2,7 @@ package com.kitri.pay.network;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+import java.util.Vector;
 
 import com.kitri.pay.dto.ComPrepaidInfoDto;
 import com.kitri.pay.dto.PointInfoDto;
@@ -31,7 +32,7 @@ public class Services {
 	    }
 	} else {
 	    network.view.payment.setVisible(true);
-	    
+	    network.view.payment.draw.points = new Vector<>();
 	    
 	    Main.log("loginSuccess userNum : " + network.view.payment.userNum);
 	}

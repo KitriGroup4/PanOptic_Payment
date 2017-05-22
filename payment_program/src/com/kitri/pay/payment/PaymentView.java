@@ -93,9 +93,9 @@ public class PaymentView extends JInternalFrame {
 	closeButton.addActionListener(listener);
     }
 
-    class DrawPanel extends JPanel {
+    public class DrawPanel extends JPanel {
 
-	Vector<Point> points = new Vector<>();
+	public Vector<Point> points = new Vector<>();
 
 	public DrawPanel() {
 	    addMouseMotionListener(new MouseMotionListener() {
